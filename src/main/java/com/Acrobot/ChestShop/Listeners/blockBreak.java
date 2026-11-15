@@ -44,7 +44,7 @@ public class blockBreak extends BlockListener {
     }
 
     private static boolean isCorrectSign(Sign sign, Block block) {
-        return sign != null && (sign.getBlock() == block || getAttachedFace(sign) == block);
+        return sign != null && (sign.getBlock().equals(block) || getAttachedFace(sign).equals(block));
     }
 
     private static Block getAttachedFace(Sign sign) {
